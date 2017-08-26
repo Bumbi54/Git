@@ -1,0 +1,18 @@
+Configuring git for the first time:
+  Set name of user. This name will be used for identifying  user who is making changes. This is global user but specific users can be configured inside projects.
+    -git config --global user.name "Ivan Drmic"
+  Set email for global user:
+    -git config --global user.email johndoe@example.com
+  Set editor that will be used by git to prompt user to enter text:
+    For Linux:
+      -git config --global core.editor emacs
+    Windows needs full path:
+      -git config --global core.editor "C:/Users/Ivan/AppData/Local/atom/atom.exe"
+  List general/global setting from git:
+    -git config --list
+  List specific parameter:
+    -git config NAME_PARAMETER
+
+Help pages:
+  These help pages are offline:
+    -git help TERM

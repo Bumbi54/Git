@@ -1,0 +1,30 @@
+Git is working on similar concept as file system. It takes picture of what files look like and save the reference to this snapshot. If files are not changed git doesn't store those file instead it saves
+reference to the previous identical file.
+  -data as stream of snapshots
+
+Almost all can be done locally and user don't need to contact the remote server to se history of changes.
+
+Git is doing check-sum for keeping integrity of files.
+  -hashing algorithm SHA-1 
+  -every thing is stored in databases by hash and not by file names
+
+Files have three main states they can be in:
+  Committed
+    Data is stored in local database
+  Modified
+    Data has been changed but it still hasn't been committed in the database.
+  Staged
+    File has been marked in current version to go into next commit snapshot.
+
+Git project has three main areas:
+  Working Directory
+    One version of project pulled from database.
+  Staging area (index)
+    File that stores information about what will go inte next commit.
+  Repository (.git directory)
+    Stores metadata and object database of project.
+
+Git use case:
+  1. You modify files in your working tree.
+  2. You stage the files, adding snapshots of them to your staging area.
+  3. You do a commit, which takes the files as they are in the staging area and stores that snapshot permanently to your Git directory.
