@@ -5,7 +5,7 @@ reference to the previous identical file.
 Almost all can be done locally and user don't need to contact the remote server to se history of changes.
 
 Git is doing check-sum for keeping integrity of files.
-  -hashing algorithm SHA-1 
+  -hashing algorithm SHA-1
   -every thing is stored in databases by hash and not by file names
 
 Files have three main states they can be in:
@@ -28,3 +28,25 @@ Git use case:
   1. You modify files in your working tree.
   2. You stage the files, adding snapshots of them to your staging area.
   3. You do a commit, which takes the files as they are in the staging area and stores that snapshot permanently to your Git directory.
+
+
+Initializing a Repository in Directory:
+  Go to directory in which you want to create new repository.
+  Type command: git init
+    -new subdirectory is created: .git (which has necessary repository files)
+
+Files in repository can have two states:
+  -tracked: files that were in last snapshot and can be:
+    -unmodified: files that are not changed
+    -modified: edited files
+    -staged
+  -untracked: all other files
+
+If there are file that we don't want to add to repository and not even list (for example some log file or configuration file) we can create new file called: ".gitignore" in which
+are written names of such files. Instead of whole file name, regular expression can be used (for example *.log to exclude all file with suffix .log)
+  Tips:
+    -Blank lines or lines starting with # are ignored.
+    -Standard glob patterns work.
+    -You can start patterns with a forward slash (/) to avoid recursivity.
+    -You can end patterns with a forward slash (/) to specify a directory.
+    -You can negate a pattern by starting it with an exclamation point (!)

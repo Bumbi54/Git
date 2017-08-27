@@ -16,3 +16,47 @@ Configuring git for the first time:
 Help pages:
   These help pages are offline:
     -git help TERM
+
+Clone already existing repository:
+  This command receives full copy of all data from server. Every version of every file in history of project.
+  It also initializes .git directory and set data to latest version.
+  DIRECTORY_NAME is optional.
+    -git clone https://URL DIRECTORY_NAME
+
+Initializing a Repository in Directory:
+  -git init
+
+Checking on state of files:
+  -git status
+    We can see what files are modified and what files are untracked. We can also see what changes will be committed.
+  -git status -s
+    For short output:
+      -M: for Modified
+      -A: for new file added to staging area
+      -??: for files that are not tracked
+      -left column is for status in staging area
+      -right column is for status in working directory
+
+To begin tracking file use command:
+  -git add NAME
+    With this we can begin tracking of single file.
+
+To add current modified file to stage state also use command:
+  -git add NAME
+
+To see more specific difference between old files and newly changed files use command:
+  -git diff
+    It list what have been changed but not yet staged. It compares what is in working directory with what is in staged area.
+  -git diff --staged
+    With this parameter we can see what has been staged but not committed.
+    This command show exact lines which were changed.
+
+To commit changes from staging area:
+  -git commit
+    It opens editor in which is listed what will be committed. In other words it show short output of command "git status".
+    We can write our own comment on what changes are.
+    After leaving the editor git creates commit message with out comments.
+  -git commit -v
+    It additionally puts output from command "git diff" in the editor.
+  -git commit -m "My message"
+    This ways we commit message can be written directly in command.
