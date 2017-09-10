@@ -60,3 +60,30 @@ To commit changes from staging area:
     It additionally puts output from command "git diff" in the editor.
   -git commit -m "My message"
     This ways we commit message can be written directly in command.
+  -git commit -a -m "My first commit messages."
+    With parameter "a" staging area can be skipped. Git will automatically stage all file that were tracked before.
+
+To remove file, it needs to be removed from staging area (from tracked files) with command:
+  It supports regular expressions in file names but special character need to be escaped "\" like character "*".
+  -git rm NAME
+    It removes it from working directory as well.
+  -git rm -f NAME
+    To force removal if file has already changed and added to staging area.
+  -git rm --cached NAME
+    If user wants to remove file from staging area but now from working directory.
+
+To rename file and still keep it tracked as with original name:
+  -git mv NAME NEW_NAME
+
+Listing history of project, previous commits:
+  -git log
+    Check help pages for attributes.
+      Attribute "-p" show difference in each commit.
+      With numerical attribute user can limit number of listed commits, for example "-2" for last 2 commits.
+      For short stats about commit (for example number of modified files):
+        -git log --stat
+      For changing format of output use:
+        -git --pretty=[online, full, short, fuller, format(custom made output)]
+      For "graphic" show of commits and merge use attribute "--graph".
+      To search through commit history for string use:
+        -git log -S STRING

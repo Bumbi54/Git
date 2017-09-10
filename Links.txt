@@ -1,2 +1,8 @@
 Git collection of .gitignore templates:
   -https://github.com/github/gitignore
+
+For "git log --pretty=format:" parameters:
+  -https://git-scm.com/book/en/v2/Git-Basics-Viewing-the-Commit-History#pretty_format
+
+For "git log" attributes:
+  -https://git-scm.com/book/en/v2/Git-Basics-Viewing-the-Commit-History#log_options

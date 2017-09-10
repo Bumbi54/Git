@@ -20,7 +20,7 @@ Git project has three main areas:
   Working Directory
     One version of project pulled from database.
   Staging area (index)
-    File that stores information about what will go inte next commit.
+    File that stores information about what will go into next commit.
   Repository (.git directory)
     Stores metadata and object database of project.
 
@@ -50,3 +50,5 @@ are written names of such files. Instead of whole file name, regular expression 
     -You can start patterns with a forward slash (/) to avoid recursivity.
     -You can end patterns with a forward slash (/) to specify a directory.
     -You can negate a pattern by starting it with an exclamation point (!)
+
+Git doesn't track file movement which means if user renames files that file will be new to git. But there is command for moving files.
