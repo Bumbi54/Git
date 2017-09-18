@@ -52,3 +52,21 @@ are written names of such files. Instead of whole file name, regular expression 
     -You can negate a pattern by starting it with an exclamation point (!)
 
 Git doesn't track file movement which means if user renames files that file will be new to git. But there is command for moving files.
+
+In git anything that was never committed is likely never to be seen again.
+
+If you and someone else clone at the same time and they push upstream and then you push upstream, your push will rightly be rejected.
+You’ll have to fetch their work first and incorporate it into yours before you’ll be allowed to push.
+
+Git can tag specific commits as important, for example releases of software 1.0, 2.0 etc.
+  Two types of tag:
+    -lightweight: similar to branch that doesn't change (just a pointer)
+    -annotated: full objects, they have checksum, name email and data. They can even be signed by GNU.
+  Push doesn't transfer tags.
+    Pushing tags is the same as pushing branches.
+
+Detached HEAD state happens when user is viewing file form previous tag.
+  If he wants to commit new changes he needs to create new branch otherwise new commit won't belong to any branch.
+    git checkout -b version2 v2.0.0
+
+Branch in git is pointer that points to commit that is pointer to the snapshot and to previous commit.

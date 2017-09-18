@@ -3,3 +3,7 @@ git add
 
 When  file is added with "git add" we need to add it again if new changes are made in it before next commit. Otherwise the version of file that will be committed will be the one when
 command "git add" was run for that file.
+
+Use aliases for commands:
+  git config --global alias.unstage 'reset HEAD --'
+  git config --global alias.ci commit
