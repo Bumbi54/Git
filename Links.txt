@@ -6,3 +6,5 @@ For "git log --pretty=format:" parameters:
 
 For "git log" attributes:
   -https://git-scm.com/book/en/v2/Git-Basics-Viewing-the-Commit-History#log_options
+
+Some change
