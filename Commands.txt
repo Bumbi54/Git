@@ -89,6 +89,8 @@ Listing history of project, previous commits:
       For "graphic" show of commits and merge use attribute "--graph".
       To search through commit history for string use:
         -git log -S STRING
+      Branching:
+        git log --oneline --decorate --graph --all
 
 To remove file from staging area (for example if user wants to exclude some file file):
   -git reset HEAD FILE_NAME
