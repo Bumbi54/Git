@@ -71,3 +71,5 @@ Detached HEAD state happens when user is viewing file form previous tag.
 
 Branch in git is pointer that points to commit that is pointer to the snapshot and to previous commit.
   Branch is just u small file with commit ID that it belongs to (checksum of commit).
+
+  Za potrebe knjige.
