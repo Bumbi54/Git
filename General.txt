@@ -72,4 +72,6 @@ Detached HEAD state happens when user is viewing file form previous tag.
 Branch in git is pointer that points to commit that is pointer to the snapshot and to previous commit.
   Branch is just u small file with commit ID that it belongs to (checksum of commit).
 
-  Za potrebe knjige.
+To merge branches use:
+  git merge NAME
+    If you are merging older branch with the one that has newer commits (is ahead of it) git will just move branch pointer to that newer branch. Also called Fast-forward.

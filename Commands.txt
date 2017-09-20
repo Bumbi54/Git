@@ -134,3 +134,15 @@ For listing tags:
       git tag v1.4-lw
     If user wants to view files in tag he can use "checkout" argument:
       git checkout 1.4
+
+Branch:
+  List branches:
+    git branch
+  Create new branch:
+    git branch NAME
+  To switch to branch:
+      git checkout NAME
+  To create and switch branch:
+    git checkout -b "NAME"
+  To delete branch:
+    git branch -d NAME
