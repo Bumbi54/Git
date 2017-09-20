@@ -62,6 +62,8 @@ To commit changes from staging area:
     This ways we commit message can be written directly in command.
   -git commit -a -m "My first commit messages."
     With parameter "a" staging area can be skipped. Git will automatically stage all file that were tracked before.
+  -git commit --amend
+    Can modify commit message or add some changes to last commit. It overwrites previous commit.
 
 To remove file, it needs to be removed from staging area (from tracked files) with command:
   It supports regular expressions in file names but special character need to be escaped "\" like character "*".
@@ -87,3 +89,60 @@ Listing history of project, previous commits:
       For "graphic" show of commits and merge use attribute "--graph".
       To search through commit history for string use:
         -git log -S STRING
+      Branching:
+        git log --oneline --decorate --graph --all
+
+To remove file from staging area (for example if user wants to exclude some file file):
+  -git reset HEAD FILE_NAME
+    File changes are not lost but only removed from staging area (won't be in next commit.)
+
+Reverting file to the version from last commit (throwing all changes since then) can be made with command:
+  -git checkout -- FILE_NAME
+    Can be dangerous to use because file is copied over and changes are lost.
+
+For viewing remote repositories:
+  -git remote
+    Add "-v" to se URL from which repositories was cloned.
+  -git remote add NAME URL
+    For adding new remote repository.
+  -git remote show REMOTE_NAME
+    Additional Information about remote repository.
+
+User can fetch new data from remote repository with:
+  -git fetch NAME
+    It doesn't merge new data with your own data.
+
+
+For fetching and merging data from remote repository to current branch user can use:
+  -git pull NAME
+
+If user wants to send his changes to server he can use:
+  -git push REMOTE_NAME BRANCh_NAME
+    To push all tags:
+      git push origin --tags
+
+For listing tags:
+  git tag
+    For search argument "l" can be used.
+      git tag -l "NAME"
+    Creating annotated tag:
+      git tag -a v1.4 -m "version 1.4"
+        Can also be used with checksum of previous commits.
+        To see tag:
+          git show v1.4
+    Creating lightweight tag:
+      git tag v1.4-lw
+    If user wants to view files in tag he can use "checkout" argument:
+      git checkout 1.4
+
+Branch:
+  List branches:
+    git branch
+  Create new branch:
+    git branch NAME
+  To switch to branch:
+      git checkout NAME
+  To create and switch branch:
+    git checkout -b "NAME"
+  To delete branch:
+    git branch -d NAME
