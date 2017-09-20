@@ -75,4 +75,4 @@ Branch in git is pointer that points to commit that is pointer to the snapshot a
 To merge branches use:
   git merge NAME
     If you are merging older branch with the one that has newer commits (is ahead of it) git will just move branch pointer to that newer branch. Also called Fast-forward.
-    If merging is not done with direct ancestor it is called three-way merge in which new commit is crated that has two parents that are two commits (branches) that we wanted to merge. .
+    If merging is not done with direct ancestor it is called three-way merge in which new commit is crated that has two parents that are two commits (branches) that we wanted to merge.
