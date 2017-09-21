@@ -1,3 +1,6 @@
+Initializing a Repository in Directory:
+  -git init
+
 Configuring git for the first time:
   Set name of user. This name will be used for identifying  user who is making changes. This is global user but specific users can be configured inside projects.
     -git config --global user.name "Ivan Drmic"
@@ -23,8 +26,10 @@ Clone already existing repository:
   DIRECTORY_NAME is optional.
     -git clone https://URL DIRECTORY_NAME
 
-Initializing a Repository in Directory:
-  -git init
+For reset of repository. This will delete your changes and replace them with file from origin remote:
+  git fetch --all
+  git reset --hard origin/master
+
 
 Checking on state of files:
   -git status
@@ -43,6 +48,12 @@ To begin tracking file use command:
 
 To add current modified file to stage state also use command:
   -git add NAME
+  To add removed files to stage area:
+    git add -A
+  To add all files in current directory:
+    git add .
+  Chose portions of a file to add to next commit (y - to confirm n - to ignore):
+    git add -p
 
 To see more specific difference between old files and newly changed files use command:
   -git diff
@@ -117,7 +128,7 @@ For fetching and merging data from remote repository to current branch user can 
   -git pull NAME
 
 If user wants to send his changes to server he can use:
-  -git push REMOTE_NAME BRANCh_NAME
+  -git push REMOTE_NAME BRANCH_NAME
     To push all tags:
       git push origin --tags
 
@@ -150,3 +161,6 @@ Branch:
     git branch -v
   To see already merged branches:
     git branch --merged
+
+Switch to different branch:
+  git checkout NAME
